@@ -37,12 +37,12 @@ public class Example
                                         {
                                             var sb = new StringBuilder();
 
-                                            var d = new char[8] { source[i], source[i1], source[i2], source[i3], source[i4], source[i5], source[i6], source[i7] };
+                                            var psw = new char[8] { source[i], source[i1], source[i2], source[i3], source[i4], source[i5], source[i6], source[i7] };
                                             //sb.Clear();
                                             //var d = new char[4] { source[i], source[i1], source[i2], source[i3] };
-                                            var str = new string(d);
+                                            var str = new string(psw);
                                             //sb.AppendLine(str);
-                                            var p = new string(d);
+                                            //var p = new string(d);
                                             //perm.Add(sb.ToString());
                                             var hash = new Platform.Kernel.Cryptography.Md4Hash().ComputeHash(str);
                                             var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(hash);
