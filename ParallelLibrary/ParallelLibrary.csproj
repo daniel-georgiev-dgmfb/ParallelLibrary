@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Platform.Kernel.Cryptography">
+      <HintPath>..\..\daniel-georgiev-dgmfb\kernel\Platform.Kernel.Cryptography\bin\Debug\net6.0\Platform.Kernel.Cryptography.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
