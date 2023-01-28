@@ -38,17 +38,11 @@ public class Example
                                             var sb = new StringBuilder();
 
                                             var psw = new char[8] { source[i], source[i1], source[i2], source[i3], source[i4], source[i5], source[i6], source[i7] };
-                                            //sb.Clear();
-                                            //var d = new char[4] { source[i], source[i1], source[i2], source[i3] };
                                             var str = new string(psw);
-                                            //sb.AppendLine(str);
-                                            //var p = new string(d);
-                                            //perm.Add(sb.ToString());
                                             var hash = new Platform.Kernel.Cryptography.Md4Hash().ComputeHash(str);
                                             var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(hash);
                                             var base64 = System.Convert.ToBase64String(plainTextBytes);
                                             sb.AppendFormat("psw - {0} - hash - {1}. Elapsed time: {2}. Generated: {3}", str, base64, stopwatch.Elapsed, Interlocked.Increment(ref total));
-                                            //Debug.WriteLine("psw: " + str + " hash: " + base64 + ". Total:" + Interlocked.Increment(ref total) + " time elapsed: " + stopwatch.Elapsed);
 #if DEBUG
                                             Debug.WriteLine(sb.ToString());
 #else
